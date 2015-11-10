@@ -2,15 +2,20 @@ doctype html
 html(lang="en")
   head
     title Markdown Converter
-    link(rel="stylesheet", href="")
-    link(href="public/styles.css", rel="stylesheet")
+    link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css", rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+    link(href="/styles.css", rel="stylesheet")
   body
-    div.container
-      div.row
-        div.input.col-sm-5
-          p Input Markdown Here
-          input(type="textarea")
-        div.output.col-sm-5
-          p Converted HTML
-          div.output
+    .container
+      .row
+        p Input Markdown Here
+      .row
+        .col-sm-5
+          .row
+            textarea.input.col-sm-12(autofocus)
+          .btn.btn-default.btn-sm Render HTML
+        .col-sm-5.col-sm-offset-2
+          .row
+            p Converted HTML
+            div.output.col-sm-12
     script(src="https://code.jquery.com/jquery-2.1.4.min.js")
+    script(src="/main.js")
